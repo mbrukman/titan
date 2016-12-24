@@ -1,0 +1,27 @@
+language: java
+dist: trusty
+sudo: false
+
+cache:
+  directories:
+    - ${HOME}/.m2
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  
+branches:
+  only:
+    - titan11-travis
+
+# Finish the build as soon as any jobs fail.
+matrix:
+  fast_finish: true
+
+script:
+  - mvn test
