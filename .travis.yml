@@ -6,5 +6,4 @@ jdk:
 
 branches:
   only:
-    - master
     - titan11-travis
